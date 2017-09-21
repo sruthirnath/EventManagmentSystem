@@ -9,6 +9,7 @@
         <asp:Label ID="Label1" runat="server" Text="UserName" BackColor="Yellow"></asp:Label>
 &nbsp;&nbsp;
         <asp:TextBox ID="un1" runat="server" style="margin-left: 59px" Width="239px"></asp:TextBox>
+         <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="un1" ErrorMessage="UserName is mandatory" ForeColor="White"></asp:RequiredFieldValidator>
         <br />
         <br />
         <br />
@@ -16,6 +17,7 @@
         <asp:Label ID="Label2" runat="server" Text="Password" BackColor="Yellow"></asp:Label>
         &nbsp;
         <asp:TextBox ID="pw1" runat="server" style="margin-left: 71px" Width="235px"></asp:TextBox>
+         <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="pw1" ErrorMessage="Password is Mandatory" ForeColor="White"></asp:RequiredFieldValidator>
          <br />
          <br />
          <br />
@@ -23,6 +25,7 @@
          <asp:Label ID="Label3" runat="server" Text="Confirm password" BackColor="Yellow"></asp:Label>
 &nbsp;&nbsp;&nbsp;
          <asp:TextBox ID="cpw1" runat="server" style="margin-left: 13px" Width="232px"></asp:TextBox>
+         <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ControlToValidate="cpw1" ErrorMessage="Confirm YourPassword" ForeColor="White"></asp:RequiredFieldValidator>
         <br />
         <br />
         <br />
