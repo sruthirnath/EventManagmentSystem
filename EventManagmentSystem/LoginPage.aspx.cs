@@ -20,29 +20,26 @@ namespace EventManagmentSystem
             SqlConnection con = new SqlConnection("Data Source=SUYPC116;Initial Catalog=EventManagment;Integrated Security=true;");
             con.Open();
 
-            SqlCommand com = new SqlCommand("select Password from RegisterTable where UserName=@name", con);
+            SqlCommand com = new SqlCommand("select * from RegisterTable where UserName=@name  AND Password=@password ", con);
             com.Parameters.AddWithValue("@name", un1.Text);
+            com.Parameters.AddWithValue("@password", pw1.Text);
             Session["name"] = un1.Text;
-
-
-            using (SqlDataReader sdr = com.ExecuteReader())
+             SqlDataReader ad = com.ExecuteReader();
+            if(ad.Read()==true)
             {
-                
-                while (sdr.Read())
-                {
-                    string pass = Convert.ToString(sdr[0]);
-
-                    if (pw1.Text == pass.TrimEnd())
-                    {
-                        Response.Redirect("~/Welcome.aspx");
-                    }
-                    else
-                    {
-                        Label3.Text = "Invalid username or password";
-                    }
-                }
+                Session["name"] = un1.Text;
+                Response.Redirect("~/Welcome.aspx");
             }
-        }
+            else
+            {
+                Label3.Text = "Invalid username or password";
+                Label3.Visible = true;
+            }
+            con.Close();
+
+
+
+       }
 
         protected void Button2_Click(object sender, EventArgs e)
         {
