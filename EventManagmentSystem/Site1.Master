@@ -10,7 +10,7 @@
     </asp:ContentPlaceHolder>  
     <style>
         body {
-            background-image: url('Models/new.jpg');
+            background-image: url('');
         }
     </style>
 </head>  
