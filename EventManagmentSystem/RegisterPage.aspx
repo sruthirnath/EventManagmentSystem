@@ -3,13 +3,14 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <body>
-  <%--  <form id="form1" runat="server">--%>
+    <%--    </form>--%>
     <div>
          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         <asp:Label ID="Label1" runat="server" Text="UserName" BackColor="Yellow"></asp:Label>
 &nbsp;&nbsp;
-        <asp:TextBox ID="un1" runat="server" style="margin-left: 59px" Width="239px"></asp:TextBox>
-         <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="un1" ErrorMessage="UserName is mandatory" ForeColor="White"></asp:RequiredFieldValidator>
+        <asp:TextBox ID="un1" runat="server" style="margin-left: 59px" Width="239px" AutoPostBack="True" OnTextChanged="un1_TextChanged"></asp:TextBox>
+         <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="un1" ErrorMessage="UserName is mandatory" ForeColor="White" Display="Dynamic"></asp:RequiredFieldValidator>
+         <asp:Label ID="Validation" runat="server" ForeColor="White"></asp:Label>
         <br />
         <br />
         <br />
